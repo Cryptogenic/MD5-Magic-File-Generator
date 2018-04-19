@@ -1,7 +1,7 @@
 # MD5 Magic File Generator
 [![Release Mode](https://img.shields.io/badge/Release%20Mode-Stable-green.svg)](https://github.com/Cryptogenic/MD5-Magic-File-Generator/)  [![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-green.svg)](https://github.com/Cryptogenic/MD5-Magic-File-Generator/)  [![Version](https://img.shields.io/badge/Version-1.0-brightgreen.svg)](https://github.com/Cryptogenic/MD5-Magic-File-Generator/) 
 
-The MD5 Magic File Generator project, is a tool developed in Golang to generate files with a given prefix that produce a magic MD5 hash to abuse type-juggling vulnerabilities in languages such as PHP. This is done by appending data to the end of the prefix until a magic hash is found. An example of such a magic hash is `0e302487394123949161357947628577`.
+The MD5 Magic File Generator project, is a tool developed in Golang to generate files with a given prefix that produce a magic MD5 hash to abuse type-juggling vulnerabilities in languages such as PHP. This is done by appending data to the end of the prefix until a magic hash is found. An example of such a magic hash is `0e578667258278439511436926540546`.
 
 The tool not only allows you to specify the prefix for the magic file, but also the maximum size of the file (at least 5kb is recommended). You can also specify the number of threads you wish to run per-core to increase the likelihood of a quicker result. In my tests, a magic collision was found on average in 10-30 minutes running single-threaded. Multi-threaded yielded times of around 5-15 minutes.
 
@@ -61,20 +61,20 @@ The MD5 Magic File Generator includes five potential CLI options (currently), on
 
 ### Example Output
 ```
-specter@ubuntu:~/md5magic$ time ./md5magic -f test.txt
+specter@ubuntu:~/md5magic$ time ./md5magic -f test.txt -o test1.out
 [+] Checking md5sum of file test.txt...
 [*] Hash: 0c50f5832db7e1aa9a6194a9cc431b3e
 [+] Checking if file is already a magic file...
 [+] File is not a magic file
 [+] Generating a magic file - this may take some time...
 [*] Found a magic collision!
-[*]     Output File: file.out
-[*]     MD5 Hash: 0e302487394123949161357947628577
+[*]     Output File: test1.out
+[*]     MD5 Hash: 0e578667258278439511436926540546
 [*] Done.
 
-real    23m39.271s
-user    23m33.124s
-sys     0m0.068s
+real    4m9.220s
+user    4m8.128s
+sys     0m0.032s
 ```
 
 ## License
