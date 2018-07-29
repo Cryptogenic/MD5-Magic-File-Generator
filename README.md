@@ -8,7 +8,7 @@ The tool not only allows you to specify the prefix for the magic file, but also 
 I created this tool because I went to abuse a type juggling vulnerability in a CTF challenge, however after doing some researching I couldn't find any tools to generate your own magic hashes, only small strings that produced magic hashes. This tool could be helpful in a CTF toolbox, but could also be used for pentesting other systems outside a CTF environment that may improperly compare file hashes.
 
 ## Getting Started
-Below are some instructions to get the project building on your machine. A bash script is also provided to easily build the project. Commands in the setup unstructions assume you run a debian-based system!
+Below are some instructions to get the project building on your machine. A bash script is also provided to easily build the project. Commands in the setup instructions assume you run a debian-based system!
 
 ### Prerequisites
 - Golang
